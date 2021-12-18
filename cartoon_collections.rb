@@ -1,3 +1,5 @@
+require 'pry'
+
 def roll_call_dwarves(arr = ["Doc", "Dopey", "Bashful", "Grumpy"])
   arr.each_with_index {|char, index| puts "#{index + 1}. #{char}"}
 end
@@ -9,7 +11,7 @@ end
 def long_planeteer_calls assorted_words = ["two", "go", "industrious", "bop"]
   assorted_words.any? {|word| word.length > 4}
 end
-
+snacks = ["crackers", "gouda", "thyme"]
 soup = ["tomato soup", "cheddar", "oyster crackers", "gouda"]
 ingredients = ["garlic", "rosemary", "bread"]
 
@@ -19,10 +21,9 @@ def find_the_cheese tester
   cheese_types.each do |cheese, index|
     if (tester.include? cheese)
       return cheese
-    else 
-      return nil
     end
   end
+  return nil
 end
 
-puts find_the_cheese soup
+puts find_the_cheese ingredients
